@@ -1,0 +1,97 @@
+	Wed Jul  1 12:37 2015 Time and Allocation Profiling Report  (Final)
+
+	   MuhkeinSanapariHaskell +RTS -p -RTS
+
+	total time  =        0.90 secs   (902 ticks @ 1000 us, 1 processor)
+	total alloc = 1,065,446,456 bytes  (excludes profiling overheads)
+
+COST CENTRE                                                              MODULE  %time %alloc
+
+wordSet.wordSet'                                                         Main     39.6   10.6
+iterativeMaxPopcountPairSearch.pairsWithCutoff                           Main     15.3   57.7
+iterativeMaxPopcountPairSearch.iterateMaxPopcountPair.pairsAboveCutoff   Main      8.4    0.0
+wordSet.wordSet'.(...)                                                   Main      8.2   17.6
+iterativeMaxPopcountPairSearch.iterateMaxPopcountPair.pairsAboveCutoff.\ Main      6.5    0.0
+iterativeMaxPopcountPairSearch.pairsWithCutoff.\                         Main      6.1    0.0
+bitmaskWord.bitmaskWord'                                                 Main      3.8    0.0
+isNotFinnishWordCharacter                                                Main      3.3    0.0
+main                                                                     Main      3.2    6.6
+bitmaskChar                                                              Main      1.8    0.0
+prepareInput.wordMap.\                                                   Main      1.4    4.6
+iterativeMaxPopcountPairSearch.intsSortedDescByPopCount                  Main      1.1    2.8
+
+
+                                                                                                                                    individual     inherited
+COST CENTRE                                                                             MODULE                    no.     entries  %time %alloc   %time %alloc
+
+MAIN                                                                                    MAIN                       60           0    0.0    0.0   100.0  100.0
+ main                                                                                   Main                      121           0    3.2    6.6   100.0  100.0
+  main.\                                                                                Main                      167           9    0.0    0.0     0.0    0.0
+   main.\.\                                                                             Main                      168           9    0.0    0.0     0.0    0.0
+    main.\.\.coveredAlphabet                                                            Main                      169           9    0.0    0.0     0.0    0.0
+  findBestPairs                                                                         Main                      122           1    0.0    0.0    96.8   93.3
+   findBestPairs.wordListsOfMaximumBitmaskPairs                                         Main                      165           1    0.0    0.0     0.0    0.0
+    findBestPairs.wordListsOfMaximumBitmaskPairs.\                                      Main                      166           9    0.0    0.0     0.0    0.0
+   findBestPairs.maximumBitmaskPairsByPopCount                                          Main                      152           1    0.1    0.0    37.6   60.4
+    iterativeMaxPopcountPairSearch                                                      Main                      153           1    0.0    0.0    37.5   60.4
+     iterativeMaxPopcountPairSearch.iterateMaxPopcountPair                              Main                      155           9    0.0    0.0    36.4   57.7
+      iterativeMaxPopcountPairSearch.iterateMaxPopcountPair.pairsAboveCutoff            Main                      163           9    8.4    0.0    15.0    0.0
+       iterativeMaxPopcountPairSearch.iterateMaxPopcountPair.pairsAboveCutoff.\         Main                      164     6406928    6.5    0.0     6.5    0.0
+      iterativeMaxPopcountPairSearch.iterateMaxPopcountPair.pairsPotentiallyAboveCutoff Main                      156           9    0.0    0.0    21.4   57.7
+       iterativeMaxPopcountPairSearch.pairsWithCutoff                                   Main                      157        3162   15.3   57.7    21.4   57.7
+        iterativeMaxPopcountPairSearch.pairsWithCutoff.\                                Main                      162     6410081    6.1    0.0     6.1    0.0
+     iterativeMaxPopcountPairSearch.intsSortedDescByPopCount                            Main                      154           1    1.1    2.8     1.1    2.8
+   findBestPairs.uniqueBitmasks                                                         Main                      151           1    0.1    0.1     0.1    0.1
+   findBestPairs.bitmasksToWordListsMap                                                 Main                      123           1    0.0    0.0    59.1   32.8
+    prepareInput                                                                        Main                      124           1    0.0    0.0    59.1   32.8
+     prepareInput.wordMap                                                               Main                      138           1    0.2    0.0     8.0    4.6
+      prepareInput.wordMap.\                                                            Main                      139       58650    1.4    4.6     7.8    4.6
+       bitmaskWord                                                                      Main                      140       58650    0.8    0.0     6.3    0.0
+        bitmaskWord.bitmaskWord'                                                        Main                      141      623272    3.8    0.0     5.5    0.0
+         bitmaskChar                                                                    Main                      142      564622    1.8    0.0     1.8    0.0
+     prepareInput.ws                                                                    Main                      125           1    0.0    0.0    51.1   28.2
+      wordSet                                                                           Main                      126           1    0.0    0.0    51.1   28.2
+       wordSet.wordSet'                                                                 Main                      127      215508   39.6   10.6    51.1   28.2
+        wordSet.wordSet'.w                                                              Main                      137      215507    0.0    0.0     0.0    0.0
+        wordSet.wordSet'.s''                                                            Main                      136      215507    0.0    0.0     0.0    0.0
+        wordSet.wordSet'.(...)                                                          Main                      134      215507    8.2   17.6    11.1   17.6
+         isNotFinnishWordCharacter                                                      Main                      135     1678835    2.9    0.0     2.9    0.0
+        isNotFinnishWordCharacter                                                       Main                      128      493998    0.4    0.0     0.4    0.0
+ CAF:main1                                                                              Main                      118           0    0.0    0.0     0.0    0.0
+  main                                                                                  Main                      120           1    0.0    0.0     0.0    0.0
+ CAF:main3                                                                              Main                      116           0    0.0    0.0     0.0    0.0
+  main                                                                                  Main                      158           0    0.0    0.0     0.0    0.0
+   findBestPairs                                                                        Main                      159           0    0.0    0.0     0.0    0.0
+    findBestPairs.maximumBitmaskPairsByPopCount                                         Main                      160           0    0.0    0.0     0.0    0.0
+     iterativeMaxPopcountPairSearch                                                     Main                      161           0    0.0    0.0     0.0    0.0
+ CAF:finnishCharToBitmaskMap_r154                                                       Main                      115           0    0.0    0.0     0.0    0.0
+  finnishCharToBitmaskMap                                                               Main                      143           1    0.0    0.0     0.0    0.0
+ CAF:lvl16_r6JV                                                                         Main                      114           0    0.0    0.0     0.0    0.0
+  finnishCharToBitmaskMap                                                               Main                      144           0    0.0    0.0     0.0    0.0
+ CAF:n_r6JT                                                                             Main                      113           0    0.0    0.0     0.0    0.0
+  finnishCharToBitmaskMap                                                               Main                      149           0    0.0    0.0     0.0    0.0
+ CAF:powersOf2_r153                                                                     Main                      112           0    0.0    0.0     0.0    0.0
+  powersOf2                                                                             Main                      145           1    0.0    0.0     0.0    0.0
+   powersOf2.\                                                                          Main                      150          29    0.0    0.0     0.0    0.0
+ CAF:lvl15_r6JR                                                                         Main                      111           0    0.0    0.0     0.0    0.0
+  powersOf2                                                                             Main                      146           0    0.0    0.0     0.0    0.0
+ CAF:lvl13_r6JP                                                                         Main                      110           0    0.0    0.0     0.0    0.0
+  powersOf2                                                                             Main                      147           0    0.0    0.0     0.0    0.0
+ CAF:lvl12_r6JO                                                                         Main                      109           0    0.0    0.0     0.0    0.0
+  powersOf2                                                                             Main                      148           0    0.0    0.0     0.0    0.0
+ CAF:finnishWordCharacters_r152                                                         Main                      108           0    0.0    0.0     0.0    0.0
+  finnishWordCharacters                                                                 Main                      129           1    0.0    0.0     0.0    0.0
+ CAF:lvl11_r6JN                                                                         Main                      107           0    0.0    0.0     0.0    0.0
+  finnishWordCharacters                                                                 Main                      130           0    0.0    0.0     0.0    0.0
+ CAF:z1_r6JL                                                                            Main                      106           0    0.0    0.0     0.0    0.0
+  finnishWordCharacters                                                                 Main                      132           0    0.0    0.0     0.0    0.0
+ CAF:z_r6JJ                                                                             Main                      105           0    0.0    0.0     0.0    0.0
+  finnishWordCharacters                                                                 Main                      133           0    0.0    0.0     0.0    0.0
+ CAF:finnishAlphabet                                                                    Main                      104           0    0.0    0.0     0.0    0.0
+  finnishAlphabet                                                                       Main                      131           1    0.0    0.0     0.0    0.0
+ CAF                                                                                    GHC.Conc.Signal            98           0    0.0    0.0     0.0    0.0
+ CAF                                                                                    GHC.IO.Encoding            92           0    0.0    0.0     0.0    0.0
+ CAF                                                                                    GHC.IO.Encoding.Iconv      90           0    0.0    0.0     0.0    0.0
+ CAF                                                                                    GHC.IO.Handle.FD           83           0    0.0    0.0     0.0    0.0
+ CAF                                                                                    GHC.IO.Handle.Internals    82           0    0.0    0.0     0.0    0.0
+ CAF                                                                                    GHC.IO.Handle.Text         81           0    0.0    0.0     0.0    0.0
