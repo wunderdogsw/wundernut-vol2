@@ -1,0 +1,1 @@
+Sieltähän pullahtaa joukko cvs-filuja, jotka pitää lähtökohtaisesti joinata, jos haluaa selkokieliset nimet ruoka-aineille.  Eiköhän tuosta sopiva pähkinä saada kasaan.

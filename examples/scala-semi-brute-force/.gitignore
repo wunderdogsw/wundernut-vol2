@@ -1,0 +1,12 @@
+.idea
+.sbt_completion_cache
+.DS_Store
+.classpath
+.project
+.settings
+.java-version
+*.iml
+
+target/
+project/target/
+project/project/
