@@ -4,6 +4,9 @@ import java.io.{ByteArrayOutputStream, PrintStream}
 
 import org.scalatest.FlatSpec
 
+/**
+ * @author Ville Komulainen, https://github.com/vkomulai
+ */
 class WordComboSpec extends FlatSpec {
 
   "WordCombo" should "print two WordPairs of length 9" in {

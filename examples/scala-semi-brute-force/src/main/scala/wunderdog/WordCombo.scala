@@ -4,6 +4,7 @@ import scala.io.Source
 import scala.collection.mutable.Set
 
 /**
+ * @author Ville Komulainen, https://github.com/vkomulai
  * Almost brute force solution to Wunderdog coding challenge #2.
  * Naive and far from optimal, but does the trick in reasonable time with relatively simple code.
  * Processes src/test/resources/alastalon_salissa.txt in ~14 secs on Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz. YMMV.
@@ -27,7 +28,7 @@ object WordCombo extends App {
     case _ => args(0)
   }
 
-  /** Words in desdenging distinct alphabet order */
+  /** Words in descending distinct alphabet order */
   val distinctWords = Source.fromFile(wordsFile)
                             .getLines
                             .flatMap(_.toLowerCase().split(WORD_SEPARATORS))
